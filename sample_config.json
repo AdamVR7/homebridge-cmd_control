@@ -1,0 +1,176 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:37",
+        "port": 51826,
+        "pin": "031-45-151"
+    },
+    
+    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
+
+
+    "accessories": [
+        {
+            "accessory": "CMD",
+	    "service": "AV",
+            "name": "TV",
+	    "description": "Livingroom tv",
+	    "setAVon_cmd": "/home/pi/setAVon.sh 1",
+	    "getAVon_cmd": "/home/pi/getAVon.sh 1",	
+            "setAVVolume_cmd": "/home/pi/setAVVolume.sh 1 1",
+            "getAVVolume_cmd": "/home/pi/getAVVolume.sh 1",
+            "setAVChannel_cmd": "/home/pi/setAVChannel.sh 1 1",
+	    "getAVChannel_cmd":	"/home/pi/getAVChannel.sh 1"
+        },
+        {
+            "accessory": "CMD",
+	    "service": "AV",
+            "name": "Receiver",
+	    "description": "Living room receiver",
+	    "setAVon_cmd": "/home/pi/setAVon.sh 0",
+	    "getAVon_cmd": "/home/pi/getAVon.sh 0",	
+            "setAVVolume_cmd": "/home/pi/setAVVolume.sh 0 1",
+            "getAVVolume_cmd": "/home/pi/getAVVolume.sh 0",
+            "setAVChannel_cmd": "/home/pi/setAVChannel.sh 0 1",
+	    "getAVChannel_cmd":	"/home/pi/getAVChannel.sh 0"
+        },
+        {
+           
+	    "accessory": "CMD",
+     	    "service": "Light",
+	    "brightnessHandling": "yes",
+            "name": "Esszimmerlicht",	
+            "on_cmd": "/home/pi/setlight.sh 100 26",
+            "off_cmd": "/home/pi/setlight.sh 0 26",
+	    "brightness_cmd": "/home/pi/setlight.sh %b 26",
+	    "get_status_cmd": "/home/pi/getlight.sh 26"	
+        }, 
+        {
+           
+	    "accessory": "CMD",
+     	    "service": "Light",
+	    "brightnessHandling": "yes",
+            "name": "Kuechenlicht",
+            "on_cmd": "/home/pi/setlight.sh 100 21",
+            "off_cmd": "/home/pi/setlight.sh 0 21",
+	    "brightness_cmd": "/home/pi/setlight.sh %b 21",
+	    "get_status_cmd": "/home/pi/getlight.sh 21"	
+        }, 
+        {
+           
+	    "accessory": "CMD",
+     	    "service": "Light",
+	    "brightnessHandling": "yes",
+            "name": "Kaminzimmerlicht",
+            "on_cmd": "/home/pi/setlight.sh 100 24",
+            "off_cmd": "/home/pi/setlight.sh 0 24",
+	    "brightness_cmd": "/home/pi/setlight.sh %b 24",
+	    "get_status_cmd": "/home/pi/getlight.sh 24"	
+        },
+        {
+           
+	    "accessory": "CMD",
+     	    "service": "Light",
+	    "brightnessHandling": "yes",
+            "name": "Wohnzimmerlicht",
+            "on_cmd": "/home/pi/setlight.sh 100 28",
+            "off_cmd": "/home/pi/setlight.sh 0 28",
+	    "brightness_cmd": "/home/pi/setlight.sh %b 28",
+	    "get_status_cmd": "/home/pi/getlight.sh 28"
+        },
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "TemperaturSensor",
+	    "name": "Aussentemperatur",
+	    "get_temperature_cmd": "/home/pi/gettemperature.sh 0"
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "TemperaturSensor",
+	    "name": "Kueche",
+	    "get_temperature_cmd": "/home/pi/gettemperature.sh 6"
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "TemperaturSensor",
+	    "name": "Esszimmer",
+	    "get_temperature_cmd": "/home/pi/gettemperature.sh 8"
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "TemperaturSensor",
+	    "name": "Kaminzimmer",
+	    "get_temperature_cmd": "/home/pi/gettemperature.sh 9"
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "TemperaturSensor",
+	    "name": "Wohnzimmer",
+	    "get_temperature_cmd": "/home/pi/gettemperature.sh 10"
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "Blinds",
+	    "name": "Wohnzimmer Jalousie",
+	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 2",
+	    "setBlindsPosition_cmd": "/home/pi/setblindsposition.sh %b 2",
+	    "getBlindsState_cmd": "/home/pi/getblindsrunning.sh 2",
+	    "setBlindsHorizontalTiltAngle_cmd": "/home/pi/setblindshorizontaltiltangle.sh %b 2",
+	    "getBlindsHorizontalTiltAngle_cmd": "/home/pi/getblindshorizontaltiltangle.sh 2"
+
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "Blinds",
+	    "name": "Kaminzimmer Jalousie",
+	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 3",
+	    "setBlindsPosition_cmd": "/home/pi/setblindsposition.sh %b 3 4 5",
+	    "getBlindsState_cmd": "/home/pi/getblindsrunning.sh 3",
+	    "setBlindsHorizontalTiltAngle_cmd": "/home/pi/setblindshorizontaltiltangle.sh %b 3 4 5",
+	    "getBlindsHorizontalTiltAngle_cmd": "/home/pi/getblindshorizontaltiltangle.sh 3"
+
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "Blinds",
+	    "name": "Esszimmer Jalousie",
+	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 7",
+	    "setBlindsPosition_cmd": "/home/pi/setblindsposition.sh %b 7 8 9 10 11",
+	    "getBlindsState_cmd": "/home/pi/getblindsrunning.sh 7",
+	    "setBlindsHorizontalTiltAngle_cmd": "/home/pi/setblindshorizontaltiltangle.sh %b 7 8 9 10 11",
+	    "getBlindsHorizontalTiltAngle_cmd": "/home/pi/getblindshorizontaltiltangle.sh 7"
+
+	},
+	{
+ 	    "accessory": "CMD",	   
+     	    "service": "Blinds",
+	    "name": "Kueche Jalousie",
+	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 12",
+	    "setBlindsPosition_cmd": "/home/pi/setblindsposition.sh %b 12",
+	    "getBlindsState_cmd": "/home/pi/getblindsrunning.sh 12",
+	    "setBlindsHorizontalTiltAngle_cmd": "/home/pi/setblindshorizontaltiltangle.sh %b 12",
+	    "getBlindsHorizontalTiltAngle_cmd": "/home/pi/getblindshorizontaltiltangle.sh 12"
+
+	},
+	{
+            "accessory": "CMD",
+            "service": "Light",
+            "brightnessHandling": "no",
+            "name": "Garage Lamp",
+            "on_cmd": "curl --silent \"http://192.168.1.177/?port=18\" >/dev/null",
+            "off_cmd": "curl --silent \"http://192.168.1.177/?port=58\" >/dev/null",
+            "get_status_cmd": "/home/pi/light_state.py",
+            "manufacturer": "SmartHome Foundation",
+            "model": "lamp",
+            "serial": "none"
+        },
+     ],
+    "platforms": [
+	{
+	"platform": "Server",
+	"port": 8765,
+	"name": "Homebridge Server"
+	}
+
+	]
+}
