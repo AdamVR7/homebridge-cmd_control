@@ -1,0 +1,59 @@
+{
+  "_args": [
+    [
+      "homebridge-cmd_control@1.0.1",
+      "."
+    ]
+  ],
+  "_from": "homebridge-cmd_control@latest",
+  "_id": "homebridge-cmd_control@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-zbAsfxJYg9H1KK3F+TtZJjRRizFPyJgxKILIy4cjt8WYsQXu8hlgGwwQx226MS9BOqxQGKxRrSKkpO9y5+MjZg==",
+  "_location": "/homebridge-cmd_control",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "homebridge-cmd_control@latest",
+    "name": "homebridge-cmd_control",
+    "escapedName": "homebridge-cmd_control",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/homebridge-cmd_control/-/homebridge-cmd_control-1.0.1.tgz",
+  "_shasum": "62c6d19380ab762d369f70de6c927c6862605fca",
+  "_spec": "homebridge-cmd_control@latest",
+  "_where": "/usr/local/lib",
+  "author": {
+    "name": "AdamVR7"
+  },
+  "bugs": {
+    "url": "https://github.com/AdamVR7/homebridge-cmd_control/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Homebridge Plug in to control my lights from cmd files",
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">=0.12.0"
+  },
+  "homepage": "https://github.com/AdamVR7/homebridge-cmd_control#readme",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "homebridge-cmd_control",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamVR7/homebridge-cmd_control.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.8"
+}
