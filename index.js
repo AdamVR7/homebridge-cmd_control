@@ -32,7 +32,7 @@ function CmdAccessory(log, config) {
     //door & garagedoor
     this.open = config["open"];
     this.close = config["close"];
-    
+
     this.getTemperature_cmd = config["get_temperature_cmd"];
     this.getCO2_cmd = config["getCO2_cmd"];
     this.getHumidity_cmd = config["getHumidity_cmd"];
@@ -42,10 +42,10 @@ function CmdAccessory(log, config) {
     this.setBlindsHorizontalTiltAngle_cmd = config["setBlindsHorizontalTiltAngle_cmd"];
     this.getBlindsHorizontalTiltAngle_cmd = config["getBlindsHorizontalTiltAngle_cmd"];
     this.setAVOn_cmd = config["setAVon_cmd"];
-    this.getAVOn_cmd = config["getAVon_cmd"];    
+    this.getAVOn_cmd = config["getAVon_cmd"];
     this.setAVVolume_cmd = config["setAVVolume_cmd"];
     this.getAVVolume_cmd = config["getAVVolume_cmd"];
-    this.setAVChannel_cmd = config["setAVChannel_cmd"];    
+    this.setAVChannel_cmd = config["setAVChannel_cmd"];
     this.getAVChannel_cmd = config["getAVChannel_cmd"];}
 
 
@@ -163,7 +163,7 @@ CmdAccessory.prototype = {
         var cmd;
 
 
-	var cmd = this.setAVOn_cmd.replace("%b", powerOn)	
+	var cmd = this.setAVOn_cmd.replace("%b", powerOn)
 
         this.cmdRequest(cmd, function (error, stdout, stderr) {
             if (error) {
@@ -185,7 +185,7 @@ CmdAccessory.prototype = {
         }
 
         this.log("Getting power state");
-	
+
 
         cmd = this.getAVOn_cmd;
 
@@ -377,7 +377,7 @@ CmdAccessory.prototype = {
                 return;
             } else {
                 this.log('CMD Set brightness function succeeded!');
-                //callback();  
+                //callback();
             }
         }.bind(this));
 
@@ -420,7 +420,7 @@ CmdAccessory.prototype = {
                 return;
             } else {
                 this.log('CMD Set color function succeeded!');
-                //callback();  
+                //callback();
             }
         }.bind(this));
 
@@ -566,7 +566,7 @@ CmdAccessory.prototype = {
             }
 
         }.bind(this));
-    }, 
+    },
 
 
     identify: function (callback) {
@@ -609,16 +609,16 @@ CmdAccessory.prototype = {
                 break;
             case "Door":
                 this.DoorService = new Service.Door(this.name);
-			  	this.DoorService
-			  		.getCharacteristic(Characteristic.TargetDoorState)
-			    	.on('set', this.setState.bind(this));
+      			  	this.DoorService
+      			  		.getCharacteristic(Characteristic.TargetDoorState)
+      			    	.on('set', this.setState.bind(this));
 
-			  	if (this.stateCommand) {
-			    	this.DoorService
-			    		.getCharacteristic(Characteristic.CurrentDoorState)
-			      	.on('get', this.getState.bind(this));
-			  	}
-			  	return [informationService, this.DoorService];
+        			  	if (this.stateCommand) {
+        			    	this.DoorService
+        			    		.getCharacteristic(Characteristic.CurrentDoorState)
+        			      	.on('get', this.getState.bind(this));
+        			  	}
+      			  	return [informationService, this.DoorService];
                 break;
             case "Light":
                 this.lightbulbService = new Service.Lightbulb(this.name);
@@ -632,7 +632,7 @@ CmdAccessory.prototype = {
                         .on('set', this.setBrightness.bind(this))
                         .on('get', this.getBrightness.bind(this));
                 }
-                //  добавляем RGB компонент 
+                //  добавляем RGB компонент
                 if (this.colorHandling == "yes") {
                     this.lightbulbService
                         .addCharacteristic(new Characteristic.Hue())
@@ -668,7 +668,7 @@ CmdAccessory.prototype = {
    			 .addCharacteristic(VolumeCharacteristic)
     			 	.on('get', this.getAVVolume.bind(this))
    			        .on('set', this.setAVVolume.bind(this));
-	
+
  		 this.AVservice
     			.addCharacteristic(ChannelCharacteristic)
     				.on('get', this.getAVChannel.bind(this))
@@ -730,7 +730,7 @@ CmdAccessory.prototype = {
                         .on('get', this.getBlindsHorizontalTiltAngle.bind(this));
 
 
-		
+
 		return [informationService, this.Blindservice];
 		break;
 
