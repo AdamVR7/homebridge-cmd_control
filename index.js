@@ -29,6 +29,10 @@ function CmdAccessory(log, config) {
     //  добавляем RGB компонент
     this.colorHandling = config["colorHandling"] || "no"
     //  end
+    //door & garagedoor
+    this.open = config["open"];
+    this.close = config["close"];
+    
     this.getTemperature_cmd = config["get_temperature_cmd"];
     this.getCO2_cmd = config["getCO2_cmd"];
     this.getHumidity_cmd = config["getHumidity_cmd"];
@@ -602,6 +606,19 @@ CmdAccessory.prototype = {
                     .on('set', this.setPowerState.bind(this))
                     .on('get', this.getPowerState.bind(this));
                 return [this.switchService];
+                break;
+            case "Door":
+                this.DoorService = new Service.Door(this.name);
+			  	this.DoorService
+			  		.getCharacteristic(Characteristic.TargetDoorState)
+			    	.on('set', this.setState.bind(this));
+
+			  	if (this.stateCommand) {
+			    	this.DoorService
+			    		.getCharacteristic(Characteristic.CurrentDoorState)
+			      	.on('get', this.getState.bind(this));
+			  	}
+			  	return [informationService, this.DoorService];
                 break;
             case "Light":
                 this.lightbulbService = new Service.Lightbulb(this.name);
