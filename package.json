@@ -1,10 +1,11 @@
 {
   "name": "homebridge-cmd_control",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Command control plugin for homebridge: https://github.com/nfarina/homebridge",
   "keywords": [
     "homebridge-plugin",
-    "command",
+    "cmd_control",
+    "cmd",
     "command"
   ],
   "engines": {
