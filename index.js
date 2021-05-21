@@ -579,9 +579,9 @@ CmdAccessory.prototype = {
         // you can OPTIONALLY create an information service if you wish to override
         // the default values for things like serial number, model, etc.
         var informationService = new Service.AccessoryInformation();
-		var manufacturer = accessory.context.manufacturer || "Default-Manufacturer";
-        var model = accessory.context.model || "Default-Model";
-        var serial = accessory.context.serial || "Default-SerialNumber";
+		var manufacturer = accessory.context.manufacturer || "SmartHome.Foundation";
+        var model = accessory.context.model || "Model";
+        var serial = accessory.context.serial || "SerialNumber";
 
         informationService
             .setCharacteristic(Characteristic.Manufacturer, manufacturer )
