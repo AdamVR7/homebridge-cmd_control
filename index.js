@@ -49,7 +49,7 @@ function CmdAccessory(log, config) {
     this.getAVChannel_cmd = config["getAVChannel_cmd"];
     this.manufacturer = config.manufacturer || 'SmartHome Foundation';
     this.model = config.model || 'Model';
-    this.serial = config.serialNumber || 'SerialNumber';}
+    this.serial = config.serial || 'SerialNumber';}
 
 
 
