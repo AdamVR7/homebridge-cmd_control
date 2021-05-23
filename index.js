@@ -605,7 +605,7 @@ CmdAccessory.prototype = {
                     .getCharacteristic(Characteristic.On)
                     .on('set', this.setPowerState.bind(this))
                     .on('get', this.getPowerState.bind(this));
-                return [this.switchService];
+                return [informationService, this.switchService];
                 break;
             case "Door":
                 this.DoorService = new Service.Door(this.name);
@@ -651,88 +651,88 @@ CmdAccessory.prototype = {
                 this.TempSensorservice = new Service.TemperatureSensor(this.name);
                 this.TempSensorservice
                     .getCharacteristic(Characteristic.CurrentTemperature)
-			.setProps( {
-   				 maxValue: 60,
-    				 minValue: -30})
-                    .on('get', this.getTemperature.bind(this));
+              			.setProps( {
+                 				 maxValue: 60,
+                  				 minValue: -30})
+                                  .on('get', this.getTemperature.bind(this));
                 return [this.TempSensorservice];
                 break;
-	    case "AV":
+      	    case "AV":
                 this.AVservice = new Service.Switch(this.name);
-  		this.AVservice
-  			.getCharacteristic(Characteristic.On)
-    				.on("set", this.setAVOn.bind(this))
-    				.on("get", this.getAVOn.bind(this));
+            		this.AVservice
+            			.getCharacteristic(Characteristic.On)
+              				.on("set", this.setAVOn.bind(this))
+              				.on("get", this.getAVOn.bind(this));
 
- 		 this.AVservice
-   			 .addCharacteristic(VolumeCharacteristic)
-    			 	.on('get', this.getAVVolume.bind(this))
-   			        .on('set', this.setAVVolume.bind(this));
+           		 this.AVservice
+             			 .addCharacteristic(VolumeCharacteristic)
+              			 	.on('get', this.getAVVolume.bind(this))
+             			        .on('set', this.setAVVolume.bind(this));
 
- 		 this.AVservice
-    			.addCharacteristic(ChannelCharacteristic)
-    				.on('get', this.getAVChannel.bind(this))
-    				.on('set', this.setAVChannel.bind(this));
-		 return [this.AVservice];
-		 break;
-	    case "CarbonDioxide":
-		this.CarbonDioxideservice = new Service.CarbonDioxideSensor(this.name);
-		this.CarbonDioxideservice
-                    .getCharacteristic(Characteristic.CarbonDioxideLevel)
-                    .on('get', this.getCarbonDioxideLevel.bind(this));
-                return [this.CarbonDioxideservice];
-                break;
-	    case "Humidity":
-		this.Humidityservice = new Service.HumiditySensor(this.name);
-		this.Humidityservice
-                    .getCharacteristic(Characteristic.CurrentRelativeHumidity)
-                    .on('get', this.getHumidityLevel.bind(this));
-                return [this.Humidityservice];
-                break;
-	    case "Blinds":
-		this.Blindservice = new Service.WindowCovering(this.name);
-		this.Blindservice
-		    .getCharacteristic(Characteristic.CurrentPosition)
-			.setProps( {
-				 unit: Characteristic.Units.PERCENTAGE,
-   				 maxValue: 100,
-    				 minValue: 0,
-    				 minStep: 20})
-		    .on('get' , this.getBlindsCurrentPosition.bind(this));
-		this.Blindservice
-		    .getCharacteristic(Characteristic.TargetPosition)
-			.setProps( {
-				 unit: Characteristic.Units.PERCENTAGE,
-   				 maxValue: 100,
-    				 minValue: 0,
-    				 minStep: 20})
-		    .on('set' , this.setBlindsCurrentPosition.bind(this));
-		this.Blindservice
-		    .getCharacteristic(Characteristic.PositionState)
-			.setProps( {
-   				 maxValue: 2,
-    				 minValue: 0,
-    				 minStep: 1})
-		    .on('get' , this.getPositionState.bind(this));
-		this.Blindservice
-                        .getCharacteristic(Characteristic.TargetHorizontalTiltAngle)
-			.setProps( {
-   				 maxValue: 100,
-    				 minValue: 0,
-    				 minStep: 20})
-                        .on('set', this.setBlindsHorizontalTiltAngle.bind(this));
-		this.Blindservice
-                        .getCharacteristic(Characteristic.CurrentHorizontalTiltAngle)
-			.setProps( {
-   				 maxValue: 100,
-    				 minValue: 0,
-    				 minStep: 20})
-                        .on('get', this.getBlindsHorizontalTiltAngle.bind(this));
+           		 this.AVservice
+              			.addCharacteristic(ChannelCharacteristic)
+              				.on('get', this.getAVChannel.bind(this))
+              				.on('set', this.setAVChannel.bind(this));
+          		 return [this.AVservice];
+          		 break;
+      	    case "CarbonDioxide":
+            		this.CarbonDioxideservice = new Service.CarbonDioxideSensor(this.name);
+            		this.CarbonDioxideservice
+                                .getCharacteristic(Characteristic.CarbonDioxideLevel)
+                                .on('get', this.getCarbonDioxideLevel.bind(this));
+                            return [this.CarbonDioxideservice];
+                            break;
+      	    case "Humidity":
+            		this.Humidityservice = new Service.HumiditySensor(this.name);
+            		this.Humidityservice
+                            .getCharacteristic(Characteristic.CurrentRelativeHumidity)
+                            .on('get', this.getHumidityLevel.bind(this));
+                        return [this.Humidityservice];
+                        break;
+      	    case "Blinds":
+            		this.Blindservice = new Service.WindowCovering(this.name);
+            		this.Blindservice
+            		    .getCharacteristic(Characteristic.CurrentPosition)
+              			.setProps( {
+              				 unit: Characteristic.Units.PERCENTAGE,
+                 				 maxValue: 100,
+                  				 minValue: 0,
+                  				 minStep: 20})
+            		    .on('get' , this.getBlindsCurrentPosition.bind(this));
+            		this.Blindservice
+            		    .getCharacteristic(Characteristic.TargetPosition)
+              			.setProps( {
+              				 unit: Characteristic.Units.PERCENTAGE,
+                 				 maxValue: 100,
+                  				 minValue: 0,
+                  				 minStep: 20})
+            		    .on('set' , this.setBlindsCurrentPosition.bind(this));
+            		this.Blindservice
+            		    .getCharacteristic(Characteristic.PositionState)
+              			.setProps( {
+                 				 maxValue: 2,
+                  				 minValue: 0,
+                  				 minStep: 1})
+            		    .on('get' , this.getPositionState.bind(this));
+            		this.Blindservice
+                    .getCharacteristic(Characteristic.TargetHorizontalTiltAngle)
+              			.setProps( {
+                 				 maxValue: 100,
+                  				 minValue: 0,
+                  				 minStep: 20})
+                    .on('set', this.setBlindsHorizontalTiltAngle.bind(this));
+            		this.Blindservice
+                    .getCharacteristic(Characteristic.CurrentHorizontalTiltAngle)
+              			.setProps( {
+                 				 maxValue: 100,
+                  				 minValue: 0,
+                  				 minStep: 20})
+                    .on('get', this.getBlindsHorizontalTiltAngle.bind(this));
 
 
 
-		return [informationService, this.Blindservice];
-		break;
+            		return [informationService, this.Blindservice];
+            		break;
 
         }
     }
