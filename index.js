@@ -46,7 +46,10 @@ function CmdAccessory(log, config) {
     this.setAVVolume_cmd = config["setAVVolume_cmd"];
     this.getAVVolume_cmd = config["getAVVolume_cmd"];
     this.setAVChannel_cmd = config["setAVChannel_cmd"];
-    this.getAVChannel_cmd = config["getAVChannel_cmd"];}
+    this.getAVChannel_cmd = config["getAVChannel_cmd"];
+    this.manufacturer = config.manufacturer || 'SmartHome Foundation';
+    this.model = config.model || 'Model';
+    this.serial = config.serialNumber || 'SerialNumber';}
 
 
 
@@ -579,14 +582,11 @@ CmdAccessory.prototype = {
         // you can OPTIONALLY create an information service if you wish to override
         // the default values for things like serial number, model, etc.
         var informationService = new Service.AccessoryInformation();
-        var manufacturer = accessory.context.manufacturer || 'SmartHome Foundation';
-        var model = accessory.context.model || 'Model';
-        var serial = accessory.context.serial || 'SerialNumber';
 
         informationService
-            .setCharacteristic(Characteristic.Manufacturer, manufacturer )
-            .setCharacteristic(Characteristic.Model, model)
-            .setCharacteristic(Characteristic.SerialNumber, serial);
+            .setCharacteristic(Characteristic.Manufacturer, this.manufacturer)
+            .setCharacteristic(Characteristic.Model, this.model)
+            .setCharacteristic(Characteristic.SerialNumber, this.serial);
 
         //		var switchService = new Service.Switch(this.name);
 
