@@ -82,7 +82,7 @@ CmdAccessory.prototype = {
                 callback(error);
             } else {
                 //this.log('power function succeeded!');
-                //callback();
+                callback();
                 //this.log(stdout);
             }
         }.bind(this));
