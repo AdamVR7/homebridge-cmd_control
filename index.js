@@ -78,9 +78,9 @@ CmdAccessory.prototype = {
                 this.log('power function failed: %s', stderr);
                 callback(error);
             } else {
-                this.log('power function succeeded!');
-                callback();
-                this.log(stdout);
+                //this.log('power function succeeded!');
+                //callback();
+                //this.log(stdout);
             }
         }.bind(this));
     },
@@ -103,7 +103,7 @@ CmdAccessory.prototype = {
             } else {
                 var binaryState = parseFloat(response);
                 var powerOn = binaryState > 0;
-                this.log("Power state is currently %d", powerOn);
+                this.log("Power state is currently %s", powerOn);
                 callback(null, powerOn);
             }
 
@@ -579,9 +579,9 @@ CmdAccessory.prototype = {
         // you can OPTIONALLY create an information service if you wish to override
         // the default values for things like serial number, model, etc.
         var informationService = new Service.AccessoryInformation();
-		var manufacturer = accessory.context.manufacturer || "SmartHome.Foundation";
-        var model = accessory.context.model || "Model";
-        var serial = accessory.context.serial || "SerialNumber";
+        var manufacturer = accessory.context.manufacturer || 'SmartHome Foundation';
+        var model = accessory.context.model || 'Model';
+        var serial = accessory.context.serial || 'SerialNumber;
 
         informationService
             .setCharacteristic(Characteristic.Manufacturer, manufacturer )
