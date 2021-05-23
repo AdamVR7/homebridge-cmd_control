@@ -92,7 +92,7 @@ CmdAccessory.prototype = {
             return;
         }
 
-        this.log("Getting power state");
+        //this.log("Getting power state");
 
         cmd = this.getStatus_cmd;
 
@@ -103,7 +103,7 @@ CmdAccessory.prototype = {
             } else {
                 var binaryState = parseFloat(response);
                 var powerOn = binaryState > 0;
-                this.log("Power state is currently %s", powerOn);
+                this.log("Power state is currently %d", powerOn);
                 callback(null, powerOn);
             }
 
