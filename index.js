@@ -581,7 +581,7 @@ CmdAccessory.prototype = {
         var informationService = new Service.AccessoryInformation();
         var manufacturer = accessory.context.manufacturer || 'SmartHome Foundation';
         var model = accessory.context.model || 'Model';
-        var serial = accessory.context.serial || 'SerialNumber;
+        var serial = accessory.context.serial || 'SerialNumber';
 
         informationService
             .setCharacteristic(Characteristic.Manufacturer, manufacturer )
