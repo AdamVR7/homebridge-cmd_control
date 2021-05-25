@@ -1,0 +1,150 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ChannelCharacteristic	.\index.js	/^  ChannelCharacteristic = function () {$/;"	c
+CmdAccessory	.\index.js	/^function CmdAccessory(log, config) {$/;"	c
+CmdAccessory.cmdRequest	.\index.js	/^    cmdRequest: function (cmd, callback) {$/;"	m
+CmdAccessory.getAVChannel	.\index.js	/^    getAVChannel: function (callback) {$/;"	m
+CmdAccessory.getAVOn	.\index.js	/^    getAVOn: function (callback) {$/;"	m
+CmdAccessory.getAVVolume	.\index.js	/^    getAVVolume: function (callback) {$/;"	m
+CmdAccessory.getBlindsCurrentPosition	.\index.js	/^    getBlindsCurrentPosition: function (callback) {$/;"	m
+CmdAccessory.getBlindsHorizontalTiltAngle	.\index.js	/^    getBlindsHorizontalTiltAngle: function (callback) {$/;"	m
+CmdAccessory.getBrightness	.\index.js	/^    getBrightness: function (callback) {$/;"	m
+CmdAccessory.getCarbonDioxideLevel	.\index.js	/^    getCarbonDioxideLevel: function (callback) {$/;"	m
+CmdAccessory.getColor	.\index.js	/^    getColor: function (callback) {$/;"	m
+CmdAccessory.getHumidityLevel	.\index.js	/^    getHumidityLevel: function (callback) {$/;"	m
+CmdAccessory.getPositionState	.\index.js	/^    getPositionState: function (callback) {$/;"	m
+CmdAccessory.getPowerState	.\index.js	/^    getPowerState: function (callback) {$/;"	m
+CmdAccessory.getServices	.\index.js	/^    getServices: function () {$/;"	m
+CmdAccessory.getTemperature	.\index.js	/^    getTemperature: function (callback) {$/;"	m
+CmdAccessory.identify	.\index.js	/^    identify: function (callback) {$/;"	m
+CmdAccessory.setAVChannel	.\index.js	/^    setAVChannel: function (powerOn, callback) {$/;"	m
+CmdAccessory.setAVOn	.\index.js	/^    setAVOn: function (powerOn, callback) {$/;"	m
+CmdAccessory.setAVVolume	.\index.js	/^    setAVVolume: function (powerOn, callback) {$/;"	m
+CmdAccessory.setBlindsCurrentPosition	.\index.js	/^    setBlindsCurrentPosition: function (level, callback) {$/;"	m
+CmdAccessory.setBlindsHorizontalTiltAngle	.\index.js	/^    setBlindsHorizontalTiltAngle: function (level, callback) {$/;"	m
+CmdAccessory.setBrightness	.\index.js	/^    setBrightness: function (level, callback) {$/;"	m
+CmdAccessory.setColor	.\index.js	/^    setColor: function (color, callback) {$/;"	m
+CmdAccessory.setPowerState	.\index.js	/^    setPowerState: function (powerOn, callback) {$/;"	m
+Service	.\index.js	/^var Service, Characteristic;$/;"	v
+VolumeCharacteristic	.\index.js	/^  VolumeCharacteristic = function() {$/;"	c
+accessories	.\sample_config.json	/^    "accessories": [$/;"	f
+accessory	.\sample_config.json	/^	    "accessory": "CMD",$/;"	f
+accessory	.\sample_config.json	/^ 	    "accessory": "CMD",	   $/;"	f
+accessory	.\sample_config.json	/^            "accessory": "CMD",$/;"	f
+author	.\package.json	/^  "author": {$/;"	f
+bridge	.\sample_config.json	/^    "bridge": {$/;"	f
+brightnessHandling	.\sample_config.json	/^	    "brightnessHandling": "yes",$/;"	f
+brightnessHandling	.\sample_config.json	/^            "brightnessHandling": "no",$/;"	f
+brightness_cmd	.\sample_config.json	/^	    "brightness_cmd": "\/home\/pi\/setlight.sh %b 21",$/;"	f
+brightness_cmd	.\sample_config.json	/^	    "brightness_cmd": "\/home\/pi\/setlight.sh %b 24",$/;"	f
+brightness_cmd	.\sample_config.json	/^	    "brightness_cmd": "\/home\/pi\/setlight.sh %b 26",$/;"	f
+brightness_cmd	.\sample_config.json	/^	    "brightness_cmd": "\/home\/pi\/setlight.sh %b 28",$/;"	f
+dependencies	.\package.json	/^  "dependencies": {}$/;"	f
+description	.\package.json	/^  "description": "Command control plugin for homebridge: https:\/\/github.com\/nfarina\/homebridge",$/;"	f
+description	.\sample_config.json	/^	    "description": "Living room receiver",$/;"	f
+description	.\sample_config.json	/^	    "description": "Livingroom tv",$/;"	f
+description	.\sample_config.json	/^    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",$/;"	f
+engines	.\package.json	/^  "engines": {$/;"	f
+exec	.\index.js	/^var exec = require("child_process").exec;$/;"	v
+getAVChannel_cmd	.\sample_config.json	/^	    "getAVChannel_cmd":	"\/home\/pi\/getAVChannel.sh 0"$/;"	f
+getAVChannel_cmd	.\sample_config.json	/^	    "getAVChannel_cmd":	"\/home\/pi\/getAVChannel.sh 1"$/;"	f
+getAVVolume_cmd	.\sample_config.json	/^            "getAVVolume_cmd": "\/home\/pi\/getAVVolume.sh 0",$/;"	f
+getAVVolume_cmd	.\sample_config.json	/^            "getAVVolume_cmd": "\/home\/pi\/getAVVolume.sh 1",$/;"	f
+getAVon_cmd	.\sample_config.json	/^	    "getAVon_cmd": "\/home\/pi\/getAVon.sh 0",	$/;"	f
+getAVon_cmd	.\sample_config.json	/^	    "getAVon_cmd": "\/home\/pi\/getAVon.sh 1",	$/;"	f
+getBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "getBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/getblindshorizontaltiltangle.sh 12"$/;"	f
+getBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "getBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/getblindshorizontaltiltangle.sh 2"$/;"	f
+getBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "getBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/getblindshorizontaltiltangle.sh 3"$/;"	f
+getBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "getBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/getblindshorizontaltiltangle.sh 7"$/;"	f
+getBlindsPosition_cmd	.\sample_config.json	/^	    "getBlindsPosition_cmd": "\/home\/pi\/getblindsposition.sh 12",$/;"	f
+getBlindsPosition_cmd	.\sample_config.json	/^	    "getBlindsPosition_cmd": "\/home\/pi\/getblindsposition.sh 2",$/;"	f
+getBlindsPosition_cmd	.\sample_config.json	/^	    "getBlindsPosition_cmd": "\/home\/pi\/getblindsposition.sh 3",$/;"	f
+getBlindsPosition_cmd	.\sample_config.json	/^	    "getBlindsPosition_cmd": "\/home\/pi\/getblindsposition.sh 7",$/;"	f
+getBlindsState_cmd	.\sample_config.json	/^	    "getBlindsState_cmd": "\/home\/pi\/getblindsrunning.sh 12",$/;"	f
+getBlindsState_cmd	.\sample_config.json	/^	    "getBlindsState_cmd": "\/home\/pi\/getblindsrunning.sh 2",$/;"	f
+getBlindsState_cmd	.\sample_config.json	/^	    "getBlindsState_cmd": "\/home\/pi\/getblindsrunning.sh 3",$/;"	f
+getBlindsState_cmd	.\sample_config.json	/^	    "getBlindsState_cmd": "\/home\/pi\/getblindsrunning.sh 7",$/;"	f
+get_status_cmd	.\sample_config.json	/^	    "get_status_cmd": "\/home\/pi\/getlight.sh 21"	$/;"	f
+get_status_cmd	.\sample_config.json	/^	    "get_status_cmd": "\/home\/pi\/getlight.sh 24"	$/;"	f
+get_status_cmd	.\sample_config.json	/^	    "get_status_cmd": "\/home\/pi\/getlight.sh 26"	$/;"	f
+get_status_cmd	.\sample_config.json	/^	    "get_status_cmd": "\/home\/pi\/getlight.sh 28"$/;"	f
+get_status_cmd	.\sample_config.json	/^            "get_status_cmd": "\/home\/pi\/light_state.py",$/;"	f
+get_temperature_cmd	.\sample_config.json	/^	    "get_temperature_cmd": "\/home\/pi\/gettemperature.sh 0"$/;"	f
+get_temperature_cmd	.\sample_config.json	/^	    "get_temperature_cmd": "\/home\/pi\/gettemperature.sh 10"$/;"	f
+get_temperature_cmd	.\sample_config.json	/^	    "get_temperature_cmd": "\/home\/pi\/gettemperature.sh 6"$/;"	f
+get_temperature_cmd	.\sample_config.json	/^	    "get_temperature_cmd": "\/home\/pi\/gettemperature.sh 8"$/;"	f
+get_temperature_cmd	.\sample_config.json	/^	    "get_temperature_cmd": "\/home\/pi\/gettemperature.sh 9"$/;"	f
+homebridge	.\package.json	/^    "homebridge": ">=0.2.0"$/;"	f
+inherits	.\index.js	/^var inherits = require('util').inherits;$/;"	v
+keywords	.\package.json	/^  "keywords": [$/;"	f
+license	.\package.json	/^  "license": "MIT",$/;"	f
+makeChannelCharacteristic	.\index.js	/^function makeChannelCharacteristic() {$/;"	f
+makeVolumeCharacteristic	.\index.js	/^function makeVolumeCharacteristic() {$/;"	f
+manufacturer	.\sample_config.json	/^            "manufacturer": "SmartHome Foundation",$/;"	f
+model	.\sample_config.json	/^            "model": "lamp",$/;"	f
+module.exports	.\index.js	/^module.exports = function (homebridge) {$/;"	f
+name	.\package.json	/^    "name": "AdamVR7"$/;"	f
+name	.\package.json	/^  "name": "homebridge-cmd_control",$/;"	f
+name	.\sample_config.json	/^	    "name": "Aussentemperatur",$/;"	f
+name	.\sample_config.json	/^	    "name": "Esszimmer Jalousie",$/;"	f
+name	.\sample_config.json	/^	    "name": "Esszimmer",$/;"	f
+name	.\sample_config.json	/^	    "name": "Kaminzimmer Jalousie",$/;"	f
+name	.\sample_config.json	/^	    "name": "Kaminzimmer",$/;"	f
+name	.\sample_config.json	/^	    "name": "Kueche Jalousie",$/;"	f
+name	.\sample_config.json	/^	    "name": "Kueche",$/;"	f
+name	.\sample_config.json	/^	    "name": "Wohnzimmer Jalousie",$/;"	f
+name	.\sample_config.json	/^	    "name": "Wohnzimmer",$/;"	f
+name	.\sample_config.json	/^	"name": "Homebridge Server"$/;"	f
+name	.\sample_config.json	/^            "name": "Esszimmerlicht",	$/;"	f
+name	.\sample_config.json	/^            "name": "Garage Lamp",$/;"	f
+name	.\sample_config.json	/^            "name": "Kaminzimmerlicht",$/;"	f
+name	.\sample_config.json	/^            "name": "Kuechenlicht",$/;"	f
+name	.\sample_config.json	/^            "name": "Receiver",$/;"	f
+name	.\sample_config.json	/^            "name": "TV",$/;"	f
+name	.\sample_config.json	/^            "name": "Wohnzimmerlicht",$/;"	f
+name	.\sample_config.json	/^        "name": "Homebridge",$/;"	f
+node	.\package.json	/^    "node": ">=0.12.0",$/;"	f
+off_cmd	.\sample_config.json	/^            "off_cmd": "\/home\/pi\/setlight.sh 0 21",$/;"	f
+off_cmd	.\sample_config.json	/^            "off_cmd": "\/home\/pi\/setlight.sh 0 24",$/;"	f
+off_cmd	.\sample_config.json	/^            "off_cmd": "\/home\/pi\/setlight.sh 0 26",$/;"	f
+off_cmd	.\sample_config.json	/^            "off_cmd": "\/home\/pi\/setlight.sh 0 28",$/;"	f
+off_cmd	.\sample_config.json	/^            "off_cmd": "curl --silent \\"http:\/\/192.168.1.177\/?port=58\\" >\/dev\/null",$/;"	f
+on_cmd	.\sample_config.json	/^            "on_cmd": "\/home\/pi\/setlight.sh 100 21",$/;"	f
+on_cmd	.\sample_config.json	/^            "on_cmd": "\/home\/pi\/setlight.sh 100 24",$/;"	f
+on_cmd	.\sample_config.json	/^            "on_cmd": "\/home\/pi\/setlight.sh 100 26",$/;"	f
+on_cmd	.\sample_config.json	/^            "on_cmd": "\/home\/pi\/setlight.sh 100 28",$/;"	f
+on_cmd	.\sample_config.json	/^            "on_cmd": "curl --silent \\"http:\/\/192.168.1.177\/?port=18\\" >\/dev\/null",$/;"	f
+pin	.\sample_config.json	/^        "pin": "031-45-151"$/;"	f
+platform	.\sample_config.json	/^	"platform": "Server",$/;"	f
+platforms	.\sample_config.json	/^    "platforms": [$/;"	f
+port	.\sample_config.json	/^	"port": 8765,$/;"	f
+port	.\sample_config.json	/^        "port": 51826,$/;"	f
+repository	.\package.json	/^  "repository": {$/;"	f
+serial	.\sample_config.json	/^            "serial": "none"$/;"	f
+service	.\sample_config.json	/^	    "service": "AV",$/;"	f
+service	.\sample_config.json	/^     	    "service": "Blinds",$/;"	f
+service	.\sample_config.json	/^     	    "service": "Light",$/;"	f
+service	.\sample_config.json	/^     	    "service": "TemperaturSensor",$/;"	f
+service	.\sample_config.json	/^            "service": "Light",$/;"	f
+setAVChannel_cmd	.\sample_config.json	/^            "setAVChannel_cmd": "\/home\/pi\/setAVChannel.sh 0 1",$/;"	f
+setAVChannel_cmd	.\sample_config.json	/^            "setAVChannel_cmd": "\/home\/pi\/setAVChannel.sh 1 1",$/;"	f
+setAVVolume_cmd	.\sample_config.json	/^            "setAVVolume_cmd": "\/home\/pi\/setAVVolume.sh 0 1",$/;"	f
+setAVVolume_cmd	.\sample_config.json	/^            "setAVVolume_cmd": "\/home\/pi\/setAVVolume.sh 1 1",$/;"	f
+setAVon_cmd	.\sample_config.json	/^	    "setAVon_cmd": "\/home\/pi\/setAVon.sh 0",$/;"	f
+setAVon_cmd	.\sample_config.json	/^	    "setAVon_cmd": "\/home\/pi\/setAVon.sh 1",$/;"	f
+setBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "setBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/setblindshorizontaltiltangle.sh %b 12",$/;"	f
+setBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "setBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/setblindshorizontaltiltangle.sh %b 2",$/;"	f
+setBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "setBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/setblindshorizontaltiltangle.sh %b 3 4 5",$/;"	f
+setBlindsHorizontalTiltAngle_cmd	.\sample_config.json	/^	    "setBlindsHorizontalTiltAngle_cmd": "\/home\/pi\/setblindshorizontaltiltangle.sh %b 7 8 9 10 11",$/;"	f
+setBlindsPosition_cmd	.\sample_config.json	/^	    "setBlindsPosition_cmd": "\/home\/pi\/setblindsposition.sh %b 12",$/;"	f
+setBlindsPosition_cmd	.\sample_config.json	/^	    "setBlindsPosition_cmd": "\/home\/pi\/setblindsposition.sh %b 2",$/;"	f
+setBlindsPosition_cmd	.\sample_config.json	/^	    "setBlindsPosition_cmd": "\/home\/pi\/setblindsposition.sh %b 3 4 5",$/;"	f
+setBlindsPosition_cmd	.\sample_config.json	/^	    "setBlindsPosition_cmd": "\/home\/pi\/setblindsposition.sh %b 7 8 9 10 11",$/;"	f
+type	.\package.json	/^    "type": "git",$/;"	f
+url	.\package.json	/^    "url": "git:\/\/github.com\/AdamVR7\/homebridge-cmd_control.git"$/;"	f
+username	.\sample_config.json	/^        "username": "CC:22:3D:E3:CE:37",$/;"	f
+version	.\package.json	/^  "version": "1.0.12",$/;"	f
