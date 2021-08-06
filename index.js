@@ -163,10 +163,8 @@ CmdAccessory.prototype = {
     //  end
 
     setAVOn: function (powerOn, callback) {
-        var cmd;
-
-
-	var cmd = this.setAVOn_cmd.replace("%b", powerOn)
+      var cmd;
+      var cmd = this.setAVOn_cmd.replace("%b", powerOn)
 
         this.cmdRequest(cmd, function (error, stdout, stderr) {
             if (error) {
@@ -208,9 +206,9 @@ CmdAccessory.prototype = {
 
 
     setAVVolume: function (powerOn, callback) {
-        var cmd;
+      var cmd;
 
-	var cmd = this.setAVVolume_cmd.replace("%b", powerOn)
+	    var cmd = this.setAVVolume_cmd.replace("%b", powerOn)
 
         this.cmdRequest(cmd, function (error, stdout, stderr) {
             if (error) {
@@ -247,20 +245,20 @@ CmdAccessory.prototype = {
         }.bind(this));
     },
     setAVChannel: function (powerOn, callback) {
-        var cmd;
+      var cmd;
 
-	var cmd = this.setAVChannel_cmd.replace("%b", powerOn)
+	    var cmd = this.setAVChannel_cmd.replace("%b", powerOn)
 
-        this.cmdRequest(cmd, function (error, stdout, stderr) {
-            if (error) {
-                this.log('power function failed: %s', stderr);
-                callback(error);
-            } else {
-                this.log('Channel function succeeded!');
-                callback();
-                this.log(stdout);
-            }
-        }.bind(this));
+      this.cmdRequest(cmd, function (error, stdout, stderr) {
+          if (error) {
+              this.log('power function failed: %s', stderr);
+              callback(error);
+          } else {
+              this.log('Channel function succeeded!');
+              callback();
+              this.log(stdout);
+          }
+      }.bind(this));
     },
     getAVChannel: function (callback) {
         if (!this.getAVChannel_cmd) {
