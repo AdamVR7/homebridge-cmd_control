@@ -147,4 +147,4 @@ setBlindsPosition_cmd	.\sample_config.json	/^	    "setBlindsPosition_cmd": "\/ho
 type	.\package.json	/^    "type": "git",$/;"	f
 url	.\package.json	/^    "url": "git:\/\/github.com\/AdamVR7\/homebridge-cmd_control.git"$/;"	f
 username	.\sample_config.json	/^        "username": "CC:22:3D:E3:CE:37",$/;"	f
-version	.\package.json	/^  "version": "1.0.12",$/;"	f
+version	.\package.json	/^  "version": "1.0.13",$/;"	f
