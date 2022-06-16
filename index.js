@@ -8,7 +8,7 @@ module.exports = function (homebridge) {
     Characteristic = homebridge.hap.Characteristic;
     makeVolumeCharacteristic();
     makeChannelCharacteristic();
-    homebridge.registerAccessory("homebridge-cmd", "CMD", CmdAccessory);
+    homebridge.registerAccessory("homebridge-cmd_control", "CMD", CmdAccessory);
 }
 
 
